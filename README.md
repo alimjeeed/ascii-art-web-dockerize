@@ -26,7 +26,7 @@
 
 2. **Clone the Repository**:
     ```bash
-    git clone https://github.com/yourusername/ascii-art-web-dockerize.git
+    git clone https://github.com/alimjeeed/ascii-art-web-dockerize.git
     cd ascii-art-web-dockerize
     ```
 
