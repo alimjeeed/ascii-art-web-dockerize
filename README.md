@@ -1,21 +1,10 @@
-# ASCII Art Web Stylize
+# ASCII Art Web Dockerize
 
-**ASCII Art Web Stylize** is a Go-based web application that transforms text into stylized ASCII art, building on the original **ASCII Art** project. In this version, we focus on enhancing the user interface to be more visually appealing, interactive, and user-friendly by adopting a pixelated, blocky design inspired by the popular video game Minecraft. Additionally, the web app is fully responsive, ensuring smooth functionality across desktops, tablets, and small mobile devices.
+**ASCII Art Web Dockerize** is an updated version of **ASCII Art Web Stylize**, now containerized with Docker for easier deployment and consistent execution. This project maintains the core functionality of transforming text into ASCII art while leveraging Docker for streamlined setup.
 
 ## Screenshot
 
 ![Screenshot of ascii-art-web-stylize](https://github.com/alimjeeed/ascii-art-web-stylize/blob/main/screenshot/ascii-art-web-stylize-screenshot.jpg)
-
-## Key Enhancements
-
-1. **Appealing and Intuitive Design**: 
-   - The web interface is revamped with a Minecraft-inspired theme to create a fun and engaging experience for users.
-   
-2. **Improved User Interaction**: 
-   - Interactive buttons allow users to easily select between ASCII banner styles like *Standard*, *Shadow*, and *Thinkertoy*.
-
-3. **Responsive Design**:
-   - The web interface is fully optimized for different screen sizes.
 
 ## Example Output
 
@@ -32,24 +21,29 @@
 
 ## Usage
 
-1. **Clone the Repository**:
+1. **Install Docker**:
+   - Ensure Docker is installed on your system. You can download and install Docker from [Docker’s official website](https://www.docker.com/products/docker-desktop).
+
+2. **Clone the Repository**:
     ```bash
-    git clone https://github.com/alimjeeed/ascii-art-web-stylize.git
-    cd ascii-art-web-stylize
+    git clone https://github.com/yourusername/ascii-art-web-dockerize.git
+    cd ascii-art-web-dockerize
     ```
 
-2. **Install Dependencies**:
-    Ensure you have Go installed on your system. You can download it from the official [Go website](https://golang.org/).
-
-3. **Run the Server**:
+3. **Build the Docker Image**:
     ```bash
-    go run main.go
+    docker build -t ascii-art-web-dockerize .
     ```
 
-4. **Access the Web Interface**:
+4. **Run the Docker Container**:
+    ```bash
+    docker run -p 8000:8000 ascii-art-web-dockerize
+    ```
+
+5. **Access the Web Interface**:
     Open your web browser and go to `http://localhost:8000`.
 
-5. **Generate ASCII Art**:
+6. **Generate ASCII Art**:
     Enter your text, choose a banner style (Standard, Shadow, Thinkertoy), and click "Generate" to see the result.
 
 ## Implementation Details
