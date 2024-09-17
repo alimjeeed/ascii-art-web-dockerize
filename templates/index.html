@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASCII Art Web</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="titleContainer">    
+    <p id="title1">ASCII ART</p>
+    <p id="title2">GENERATOR</p>
+</div>
+
+<div class="container">
+    <div class="form">
+        <form action="/ascii-art" method="POST">
+            <textarea id="inputString" name="inputString" placeholder="Enter your text here." required></textarea><br><br>
+
+            <div class="buttonsContainer">
+
+                <span class="buttons">
+                    <input type="radio" id="standard" name="banner" value="standard" checked>
+                    <label for="standard">STANDARD</label><br>
+                </span>
+                <span class="buttons">
+                    <input type="radio" id="shadow" name="banner" value="shadow">
+                    <label for="shadow">SHADOW</label><br>
+                </span>
+                <span class="buttons">
+                    <input type="radio" id="thinkertoy" name="banner" value="thinkertoy">
+                    <label for="thinkertoy">THINKERTOY</label><br>
+                </span>
+
+            </div>
+
+            <input type="submit" id="submitButton" value="GENERATE">
+        </form>
+        <div id="output">
+            <!-- Conditional block: This section only appears if the .InputString field is set in the template data. -->
+            {{if .Output}}
+                <code><bold>{{.Output}}</bold></code>
+            {{else}}
+                <p>Your ASCII art will appear here. Enter some text above, choose a banner and hit "Generate" to see it!</p>
+            {{end}}
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="version">
+        <p>v1.21.23</p>
+    </div>
+</footer>
+</body>
+</html>

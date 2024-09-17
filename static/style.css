@@ -1,0 +1,276 @@
+/* Font */
+@font-face {
+    font-family: 'monaco'; /* Name your font family */
+    src: url('monaco.ttf'); /* Locate the .ttf file within your directory */
+}
+
+/* Global Styles */
+html {
+    background-image: url("minecraft-night.webp");
+    background-size: cover;  /* Ensures the background covers the entire screen */
+    background-repeat: no-repeat;  /* Prevents the background from repeating */
+    background-position: center center;  /* Centers the background on both axes */
+    background-attachment: fixed;  /* Keeps the background fixed during scrolling */
+}
+
+html, body {
+    height: 100%;
+    font-family: monaco; 
+    margin: 0;
+}
+
+/* Font sise for all elements */
+.buttons label, #submitButton, #output, textarea, textarea::placeholder  {
+    font-size: 1.5vw;
+}
+
+/* Container and Layout */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titleContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(40, 40, 40);
+    margin-top: 6%;
+    margin-bottom: 0;
+}
+
+/* Form Styles */
+.form {
+    width: 50%;
+    max-width: 550px;
+    padding: 3%;
+}
+
+textarea, textarea::placeholder {
+    font-family: monaco;
+}
+
+/* Input Box Styling */
+#inputString {
+    resize: none;
+    height: 100px;
+    width: 100%;
+    color: #C0C0C0;
+    background-color: #2C2C2C;
+    border: 2px solid #000; /* Black border for Minecraft-style */
+    border-radius: 2.5px;
+    box-sizing: border-box; /* Fix for padding overflow */
+    box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.5); /* Inset shadow for 3D effect */
+    text-shadow: 
+        1px 1px 0 #000, /* Black shadow to mimic blocky text */
+        1px 1px 2px rgba(0, 0, 0, 0.5); /* Slight blurred shadow for depth */
+
+    outline: none; /* Disable blue outline on focus */    
+    padding: 2%;    
+}
+
+/* Button Container */
+.buttonsContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 1% 0;
+}
+
+/* Button Styles */
+.buttons {
+    position: relative;
+}
+
+.buttons input {
+    position: absolute;
+    opacity: 0;
+}
+
+.buttons label {
+    display: inline-block;
+    vertical-align: bottom;
+    text-align: center;
+    width: 8vw;
+    max-width: 110px;
+    background-color: #ddd;
+    border-bottom: solid 4px #bbb;
+    border-radius: 2.5px;
+    cursor: pointer;
+    padding: 10px 30px;
+    transition: background-color 0.1s ease, color 0.1s ease, border-bottom 0.1s ease;
+}
+
+.buttons label:hover, .buttons input:checked + label {
+    color: white;
+    background-color: #5B8B32;
+    border-bottom: solid 4px #426424;
+}
+
+/* Submit Button */
+#submitButton {
+    vertical-align: bottom;
+    text-align: center;
+    width: 100%;
+    font-family: monaco;
+    background-color: #ddd;
+    border-bottom: solid 4px #bbb;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-radius: 2.5px;
+    cursor: pointer;
+    padding: 10px 30px;
+    margin-top: 1%;
+}
+
+/* Submit Button Hover */
+#submitButton:hover {
+    color: white;
+    background-color: #5B8B32;
+    border-bottom: solid 4px #426424;
+    transition: 0.1s;
+}
+
+/* Title Styles */
+#title1, #title2 {
+    text-align: center;
+    font-size: 140px; /* Adjust font size based on viewport width */
+    letter-spacing: 1vw; /* Spacing between letters */
+    color: #C0C0C0; /* Gray color */
+    -webkit-text-stroke: 2px black; /* Black border around letters */
+    text-shadow: 
+        3px 3px 0 #000, /* Black shadow for 3D effect */
+        3px 3px 5px rgba(0, 0, 0, 0.5); /* Slight blurred shadow for depth */
+    margin: 0;    
+}
+
+/* Output Box Styles */
+#output {
+    text-align: center;
+    max-height: 300px;
+    width: 100%;
+    color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(221, 221, 221, 0.5);
+    border-radius: 2.5px;
+    overflow: auto; /* Allow scrolling if content overflows */
+    box-sizing: border-box; /* Fix for padding overflow */
+    padding: 3%;
+    margin-top: 3%;
+}
+
+/* Code Block Styling (ASCII ART) */
+code {
+    white-space: pre;
+    font-size: 13px;
+}
+
+/* Footer Styling */ 
+.version {
+    text-align: center;
+    width: fit-content;
+    font-size: 25px;
+    color: white;
+    background-color: rgb(0, 0, 0, 0.7);
+    margin-left: auto;
+    margin-right: 3%;
+}
+
+/* Responsive Design */
+@media (max-width: 1300px) {
+    .buttons label {
+        width: 9vw;
+    }
+
+    .buttons label, #submitButton, #output, textarea, textarea::placeholder  {
+        font-size: 2vw;
+        transition: 0.1s ease;
+    }
+}
+
+@media (max-width: 1100px) {
+    html {
+        background-size: cover;  /* Still ensures the image covers the screen */
+        background-position: center;  /* Keeps the background centered */
+        transition: 0.1s ease;
+    }
+}
+
+/* Responsive Style for small devices */
+@media (max-width: 850px) {
+    html {
+        background-size: auto;
+        transition: 0.1s ease;
+    }
+
+    .form {
+        width: 70%;
+        transition: 0.1s ease;
+    }
+
+    .titleContainer {
+        margin-bottom: 0;
+    }
+
+    #title1, #title2 {
+        font-size: 19vw; /* Adjust font size based on viewport width */
+    }
+
+    .buttons label {
+        width: 12vw;
+        transition: 0.1s ease;
+    }
+
+    .buttons label, #submitButton, #output, textarea, textarea::placeholder {
+        font-size: 2.8vw;
+        transition: 0.1s ease;
+    }
+}
+
+/* Responsive Styles for Very Small Devices */
+@media (max-width: 550px) {
+    @media (max-width: 550px) {
+        .buttonsContainer {
+            flex-direction: column;  
+            align-items: center;
+            width: 100%;  
+            padding: 0;  /* Remove any extra padding */
+        }
+    
+        .buttons {
+            width: 100%;  
+            box-sizing: border-box;  /* Prevent padding from exceeding the width */
+        }
+    
+        .buttons label {
+            display: block;  /* Ensure the label behaves like a block element */
+            width: 100%;  
+            margin: 1px 0;  
+            padding: 10px;  
+            box-sizing: border-box;  /* Prevent padding from exceeding the width */
+        }
+
+        #submitButton {
+            width: 100%;  
+            margin: 20px 0 0 0; 
+        }
+    
+        .buttons label, #submitButton, #output, textarea, textarea::placeholder {
+            font-size: 4vw;
+        }
+    
+        .form {
+            width: 90%;  
+            transition: 0.1s ease;
+        }
+    
+        #title1, #title2 {
+            font-size: 24vw;  
+        }
+
+        .buttons label {
+            max-width: 10000px;
+        }
+    }
+}
