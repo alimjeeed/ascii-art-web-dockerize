@@ -6,9 +6,10 @@ import (
 	"text/template"
 )
 
+const templatePath = "templates/index.html"
+
 // Checks if the "templates/index.html" file exists.
 func CheckTemplateExists() bool {
-	const templatePath = "templates/index.html"
 	_, err := os.Stat(templatePath)
 	return err == nil
 }
@@ -18,7 +19,7 @@ var tmpl *template.Template
 func init() {
 	// Check if the template exists before parsing it.
 	if CheckTemplateExists() {
-		tmpl = template.Must(template.ParseFiles("templates/index.html"))
+		tmpl = template.Must(template.ParseFiles(templatePath))
 	}
 }
 
