@@ -46,16 +46,14 @@
 6. **Generate ASCII Art**:
     Enter your text, choose a banner style (Standard, Shadow, Thinkertoy), and click "Generate" to see the result.
 
-## Implementation Details
+## How It Works (Algorithm)
 
-### Algorithm
+The application converts text into ASCII art using the following steps:
 
-The ASCII-Art-Web-Stylize application uses an algorithm to convert text into ASCII art. Here’s a brief overview:
-
-1. **Input Processing**: Validates the input to ensure it contains only printable ASCII characters.
-2. **Template Selection**: Allows users to choose from various banner styles (e.g., standard, shadow, thinkertoy). The selected template is loaded.
-3. **Character Mapping**: Converts each character to its ASCII value and maps it to the corresponding art lines in the selected template.
-4. **Output Generation**: Combines the ASCII art lines to produce the final output, which is displayed in the web interface.
+1. **Input Validation**: The input is checked to ensure it contains only valid ASCII characters.
+2. **Banner Style Selection**: Users can choose between different ASCII art styles (Standard, Shadow, Thinkertoy).
+3. **ASCII Mapping**: Each character in the input text is mapped to the corresponding ASCII representation from the selected template.
+4. **Output Generation**: The ASCII art is constructed and displayed on the web page.
 
 ## Authors
 
@@ -63,12 +61,8 @@ The ASCII-Art-Web-Stylize application uses an algorithm to convert text into ASC
 - **Basem** - [GitHub](https://github.com/basem9999)
 - **Osama** - [GitHub](https://github.com/oalmaska)
 
-## Font License
+## License Information
 
-The font used in this project is:
+The project uses the **Monaco** font, designed by Jamie Place, licensed under the Creative Commons Attribution Share Alike ([CC BY-SA 3.0](http://creativecommons.org/licenses/by-sa/3.0/)) license.
 
-- **FontStruction**: Monaco
-- **Designer**: Jamie Place
-- **License**: Creative Commons Attribution Share Alike ([CC BY-SA 3.0](http://creativecommons.org/licenses/by-sa/3.0/))
-
-You can view and download the font here: [Monaco FontStruction](http://fontstruct.com/fontstructions/show/753435)
+**Font Source**: [Monaco FontStruction](http://fontstruct.com/fontstructions/show/753435)
