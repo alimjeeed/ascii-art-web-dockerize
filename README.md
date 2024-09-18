@@ -1,6 +1,10 @@
 # ASCII Art Web Dockerize
 
-**ASCII Art Web Dockerize** is an updated version of **ASCII Art Web Stylize**, now containerized with Docker for easier deployment and consistent execution. This project maintains the core functionality of transforming text into ASCII art while leveraging Docker for streamlined setup.
+**ASCII Art Web Dockerize** is a Go-powered web app that transforms your text into stunning ASCII art with a fun, Minecraft-inspired design. Its responsive interface ensures a smooth, engaging experience on any device, from desktop to mobile, making your words come alive in creative, pixelated style.
+
+### Docker Support
+
+This project now includes a `Dockerfile`, allowing you to easily containerize and deploy the application. With Docker, you can run the app in an isolated environment, ensuring consistency across different systems and simplifying the deployment process.
 
 ## Screenshot
 
