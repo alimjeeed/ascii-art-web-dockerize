@@ -50,6 +50,38 @@ This project now includes a `Dockerfile`, allowing you to easily containerize an
 6. **Generate ASCII Art**:
     Enter your text, choose a banner style (Standard, Shadow, Thinkertoy), and click "Generate" to see the result.
 
+## Project Structure
+
+```plaintext
+.
+├── Dockerfile
+├── README.md
+├── banners
+│   ├── shadow.txt
+│   ├── standard.txt
+│   └── thinkertoy.txt
+├── go.mod
+├── internal
+│   ├── generateasciiart.go
+│   ├── getasciiart.go
+│   ├── isstringsliceempty.go
+│   ├── readbannerfile.go
+│   └── stringtoascii.go
+├── main.go
+├── screenshot
+│   └── ascii-art-web-stylize-screenshot.jpg
+├── static
+│   ├── minecraft-day.webp
+│   ├── minecraft-night.webp
+│   ├── monaco.ttf
+│   └── style.css
+├── templates
+│   └── index.html
+└── web
+    ├── asciiart.go
+    └── home.go
+```   
+
 ## How It Works (Algorithm)
 
 The application converts text into ASCII art using the following steps:
