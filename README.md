@@ -24,26 +24,22 @@
 1. **Install Docker**:
    - Ensure Docker is installed on your system. You can download and install Docker from [Docker’s official website](https://www.docker.com/products/docker-desktop).
 
-2. **Clone the Repository**:
+2. **Pull the Docker Image**:
+    Instead of building the image manually, you can pull the pre-built Docker image from the repository.
     ```bash
-    git clone https://github.com/alimjeeed/ascii-art-web-dockerize.git
-    cd ascii-art-web-dockerize
+    docker pull alimjeeed/ascii-art-app
     ```
 
-3. **Build the Docker Image**:
+3. **Run the Docker Container**:
+    Run the container using the image and map it to port 8000 on your local machine.
     ```bash
-    docker build -t ascii-art-web-dockerize .
+    docker run --name ascii-art-runner -p 8000:8000 alimjeeed/ascii-art-app
     ```
 
-4. **Run the Docker Container**:
-    ```bash
-    docker run -p 8000:8000 ascii-art-web-dockerize
-    ```
+4. **Access the Web Interface**:
+    Open your web browser and go to `http://localhost:8000` to access the ASCII art generator.
 
-5. **Access the Web Interface**:
-    Open your web browser and go to `http://localhost:8000`.
-
-6. **Generate ASCII Art**:
+5. **Generate ASCII Art**:
     Enter your text, choose a banner style (Standard, Shadow, Thinkertoy), and click "Generate" to see the result.
 
 ## Implementation Details
