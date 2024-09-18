@@ -4,7 +4,7 @@
 
 ### Docker Support
 
-This project now includes a `Dockerfile`, allowing you to easily containerize and deploy the application. With Docker, you can run the app in an isolated environment, ensuring consistency across different systems and simplifying the deployment process.
+This project includes a `Dockerfile`, allowing you to easily containerize and deploy the application. With Docker, you can run the app in an isolated environment, ensuring consistency across different systems and simplifying the deployment process.
 
 ## Screenshot
 
