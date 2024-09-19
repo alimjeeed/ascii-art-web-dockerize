@@ -39,13 +39,11 @@ Here's the updated **Usage** section for your README, reflecting the new usage o
     ```
 
 3. **Build the Docker Image**:
-    Instead of manually building the Docker image, use the provided **Makefile**:
     ```bash
     make build
     ```
 
 4. **Run the Docker Container**:
-    To start the Docker container, simply run:
     ```bash
     make run
     ```
