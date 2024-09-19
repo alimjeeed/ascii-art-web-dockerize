@@ -25,8 +25,6 @@ This project includes a `Dockerfile`, allowing you to easily containerize and de
 
 ## How to Use
 
-### Docker-Based Method
-
 1. **Install Docker**:
    - Ensure Docker is installed on your system. You can download and install Docker from [Docker’s official website](https://www.docker.com/products/docker-desktop).
 
@@ -51,28 +49,6 @@ This project includes a `Dockerfile`, allowing you to easily containerize and de
 
 6. **Generate ASCII Art**:
     Enter your text, select a banner style (Standard, Shadow, Thinkertoy), and click "Generate" to view the result.
-
-### Go-Based Method
-
-1. **Clone the Repository**:
-    ```bash
-    git clone https://github.com/alimjeeed/ascii-art-web-stylize.git
-    cd ascii-art-web-stylize
-    ```
-
-2. **Install Go**:  
-   Ensure Go is installed. You can download it from the official [Go website](https://golang.org/).
-
-3. **Run the Application**:
-    ```bash
-    go run main.go
-    ```
-
-4. **Access the Application**:
-   Open your web browser and navigate to `http://localhost:8000` to access the web interface.
-
-5. **Generate ASCII Art**:
-   Enter your text, select a style (Standard, Shadow, Thinkertoy), and click "Generate" to view the ASCII art.
 
 ## Project Structure
 
