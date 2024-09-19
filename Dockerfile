@@ -1,22 +1,28 @@
-FROM golang:1.22
+#build stage
+# Build stage
+FROM golang:alpine AS builder
+RUN apk add --no-cache git
+WORKDIR /go/src/app
+COPY . .
+RUN go get -d -v ./...
+RUN go build -o /go/bin/app -v .
 
-# Set destination for COPY
+# Final stage
+FROM alpine:latest
+RUN apk --no-cache add ca-certificates
 WORKDIR /app
 
-# Download Go modules
-COPY go.mod ./
-RUN go mod download
+# Copy the Go binary from the builder stage
+COPY --from=builder /go/bin/app /app
 
-# Copy the source code.
-COPY . .
+# Copy the templates and static files from the build context to the image
+COPY --from=builder /go/src/app/templates /app/templates
+COPY --from=builder /go/src/app/static /app/static
+COPY --from=builder /go/src/app/banners /app/banners
 
-# Set permissions for the application files
-RUN chmod -R 755 /app
+# Set the entrypoint
+ENTRYPOINT ["/app/app"]
 
-# Build the Go application
-RUN CGO_ENABLED=0 GOOS=linux go build -o /docker-gs-ping
-
+# Metadata and port
+LABEL Name=asciiartwebdockerize Version=0.0.1
 EXPOSE 8000
-
-# Run
-CMD ["/docker-gs-ping"]
