@@ -23,7 +23,11 @@ This project includes a `Dockerfile`, allowing you to easily containerize and de
                                 
 ```
 
-## Usage
+Here's the updated **Usage** section for your README, reflecting the new usage of the **Makefile** instead of manually running Docker commands:
+
+---
+
+## How to Use
 
 1. **Install Docker**:
    - Ensure Docker is installed on your system. You can download and install Docker from [Docker’s official website](https://www.docker.com/products/docker-desktop).
@@ -35,17 +39,19 @@ This project includes a `Dockerfile`, allowing you to easily containerize and de
     ```
 
 3. **Build the Docker Image**:
+    Instead of manually building the Docker image, use the provided **Makefile**:
     ```bash
-    docker build -t ascii-art-web-dockerize .
+    make build
     ```
 
 4. **Run the Docker Container**:
+    To start the Docker container, simply run:
     ```bash
-    docker run -p 8000:8000 ascii-art-web-dockerize
+    make run
     ```
 
 5. **Access the Web Interface**:
-    Open your web browser and go to `http://localhost:8000`.
+    Open your web browser and go to `http://localhost:8080`.
 
 6. **Generate ASCII Art**:
     Enter your text, choose a banner style (Standard, Shadow, Thinkertoy), and click "Generate" to see the result.
@@ -55,6 +61,7 @@ This project includes a `Dockerfile`, allowing you to easily containerize and de
 ```plaintext
 .
 ├── Dockerfile
+├── Makefile
 ├── README.md
 ├── banners
 │   ├── shadow.txt
