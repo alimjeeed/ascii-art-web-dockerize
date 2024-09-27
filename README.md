@@ -45,7 +45,7 @@ This project includes a `Dockerfile`, allowing you to easily containerize and de
     ```
 
 5. **Access the Web Interface**:
-    Open your web browser and navigate to `http://localhost:8080`.
+    Open your web browser and navigate to `http://localhost:8000`.
 
 6. **Generate ASCII Art**:
     Enter your text, select a banner style (Standard, Shadow, Thinkertoy), and click "Generate" to view the result.
